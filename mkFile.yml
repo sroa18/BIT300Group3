@@ -1,0 +1,12 @@
+---
+ - name: createFile
+   hosts: ubuntuservers
+   remote_user: sroa
+
+   tasks:
+    - name: create txt file
+      shell: echo "This file was created on ..." > small.txt
+    - name: add data to the file 
+      shell: data >> smell.txt
+
+...

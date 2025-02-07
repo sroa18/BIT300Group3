@@ -1,0 +1,15 @@
+---
+
+- name: Update All
+  hosts: Ubuntuservers
+  remote_user: sroa
+  become: yes
+
+  tasks:
+   - name: Update the cache and upgrade all packages
+     apt:
+       upgrade_cache: yes
+       upgrade: full
+
+
+...
